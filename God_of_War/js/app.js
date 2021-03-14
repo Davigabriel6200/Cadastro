@@ -8,7 +8,6 @@ document.addEventListener('DOMContentLoaded', () => {
             width: '0%', delay: 5, ease: Expo.easeInOut
         })
 
-
         .fromTo('.bg-video', 2,
             { width: '0%', opacity: 0 },
             {
