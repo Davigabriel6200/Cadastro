@@ -1,0 +1,101 @@
+@mixin responsive() {
+  @media screen and (max-width: 960px) {
+    @content;
+  }
+}
+
+@include responsive() {
+ 
+  .container {
+    flex-direction: column;
+    align-items: flex-start;
+    
+    height: auto;
+
+    background: linear-gradient(
+      155.99deg,
+      #292929 34.08%,
+      #30363b 46.43%,
+      #6199c1 102.83%
+    )
+  }
+
+  .container-item-1 {
+    align-items: flex-start;
+  }
+
+  .navbar{
+    width: 100%;
+    align-items: flex-start;
+    justify-content: space-around;
+  }
+
+  .nav-list {
+    position: fixed;
+    top: 0;
+    right: -1000%;
+    margin: 0;
+    z-index: 999;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    background-color: $blue-light;
+
+    flex-direction: column;
+
+    transition: 1.2s ease-in-out;
+  }
+
+  .nav-list.active {
+    right: 0;
+  }
+
+  .nav-link {
+    font-size: 36px;
+    margin: 18px 0;
+    width: 500px;
+    height: 80px;
+
+    color: $white-light;
+
+    &::after {
+      display: none;
+    }
+
+    &:hover {
+      transform: translate(10px, 5px);
+      color: $white-light;
+    }
+  }
+
+  .hamburguer {
+    display: block;
+    z-index: 999;
+
+    top: 25px;
+  }
+
+  .logo {
+    top: 10px;
+    left: 80px;
+    margin: 0;
+  }
+
+  .bg-video {
+    display: none;
+  }
+
+  .nav-social {
+    display: none;
+  }
+
+  .bx {
+    display: block;
+
+    width: 40px;
+    height: 40px;
+  }
+
+}

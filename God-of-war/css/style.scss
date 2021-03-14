@@ -1,0 +1,57 @@
+.border {
+  border: 1px solid greenyellow;
+}
+
+@import "partials/spacing";
+@import "partials/colors";
+@import "partials/menu";
+@import "partials/layout";
+@import "partials/buttons";
+@import "partials/typography";
+@import "partials/animation";
+@import "partials/responsive";
+
+@mixin responsive() {
+  @media screen and (max-width: 960px) {
+    @content;
+  }
+}
+
+*,
+*:after,
+*:before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Mukta", sans-serif;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  //overflow: hidden;
+
+  background-color: $black;
+}
+
+img,
+svg {
+  display: block;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: $white;
+}
+
+p {
+  font-size: 16px;
+  color: $gray-3;
+  letter-spacing: 1px;
+  font-weight: 200;
+}
+
+.nav-link {
+  font-family: "Varela Round", sans-serif;
+}

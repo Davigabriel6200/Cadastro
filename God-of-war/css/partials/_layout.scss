@@ -1,0 +1,161 @@
+// Layout of project
+
+// Container-devices
+$container-xl: 1440px;
+$container-l: 1140px;
+$container-m: 960px;
+$container-s: 580px;
+
+.container {
+  max-width: $container-xl;
+  //margin: 0 auto;
+  padding: 36px 16px;
+
+  height: 100vh;
+
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+
+  position: relative;
+  overflow: hidden;
+}
+
+.container-item-1 {
+  max-width: $container-s;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.container-item-2 {
+  flex-grow: 5;
+}
+
+.kratos {
+  width: 120%;
+  transition: 0.7s ease;
+  transform: translate3d(-115px, 35px, 0);
+
+  @include responsive() {
+    width: 165%;
+  }
+}
+
+.flex {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: fit-content;
+
+  @include responsive() {
+    margin-left: 35%;
+    align-items: center;
+    width: fit-content;
+  }
+}
+
+.jogo {
+  width: 100%;
+}
+
+.vetor-1 {
+  position: absolute;
+  width: 531.45px;
+  height: 268.95px;
+  left: 1038.29px;
+  top: 495px;
+
+  background: linear-gradient(
+    212.94deg,
+    rgba(30, 86, 126, 0.2) 19.66%,
+    rgba(97, 153, 193, 0.2) 63.15%
+  );
+  filter: blur(146px);
+  transform: rotate(35.01deg);
+}
+
+.vetor-2 {
+  position: absolute;
+  width: 825px;
+  height: 302px;
+  left: 901.5px;
+  top: 250px;
+
+  background: linear-gradient(
+    212.94deg,
+    rgba(30, 86, 126, 0.3) 19.66%,
+    rgba(97, 153, 193, 0.3) 63.15%
+  );
+
+  filter: blur(146px);
+  transform: rotate(36.4deg);
+}
+
+.vetor-1,
+.vetor-2 {
+  @include responsive() {
+    display: none;
+  }
+}
+
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  z-index: -1;
+
+  width: 115%;
+  height: 115%;
+
+  overflow: hidden;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+
+    background: linear-gradient(
+      72.19deg,
+      #0b0c10 21.86%,
+      rgba(11, 12, 16, 0.75) 53.66%,
+      rgba(12, 12, 16, 0.75) 79.42%,
+      #0c0c10 100%
+    );
+  }
+}
+
+.video {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.bg-loader {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  background: linear-gradient(225deg, $blue 0%, $blue-dark 100%);
+  //overflow: hidden;
+}

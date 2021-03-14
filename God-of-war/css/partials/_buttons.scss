@@ -1,0 +1,133 @@
+.btn {
+  display: inline-block;
+
+  padding: 12px 36px;
+  border-radius: 5px;
+
+  transform: skewX(-15deg);
+  text-transform: uppercase;
+
+  background: linear-gradient(267.72deg, #6199c1 0.88%, #1e567e 100%);
+
+  position: relative;
+  transition: all 1s ease;
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+
+    width: 30%;
+    height: 70%;
+    opacity: 0;
+
+    top: -4px;
+    left: -3px;
+    border-radius: 3px;
+
+    border-top: 4px solid $white-light;
+    border-left: 4px solid $white;
+
+    transition: all 1s ease;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+
+    width: 30%;
+    height: 70%;
+    opacity: 0;
+
+    top: 17px;
+    left: 144px;
+    border-radius: 3px;
+
+    border-bottom: 4px solid $white-light;
+    border-right: 4px solid $white;
+
+    transition: all 1s ease;
+  }
+
+  &:hover {
+    transform: skewX(-15deg) scale(1.05);
+    &::after {
+      opacity: 2;
+    }
+    &::before {
+      opacity: 2;
+    }
+  }
+}
+
+.btn-secondary {
+  display: inline-block;
+
+  padding: 10px 36px;
+  border-radius: 5px;
+
+  transform: skewX(-15deg);
+  text-transform: uppercase;
+  border: 2px solid $blue-light;
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    z-index: -1;
+
+    width: 0;
+    height: 100%;
+
+    background: linear-gradient(267.72deg, #6199c1 0.88%, #1e567e 100%);
+
+    transition: 1.5s ease;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    z-index: -1;
+
+    width: 0;
+    height: 100%;
+
+    background: linear-gradient(267.72deg, #6199c1 0.88%, #6199c1 100%);
+
+    transition: 1.5s ease;
+  }
+
+  &:hover {
+    &::after,
+    &::before {
+      width: 100%;
+    }
+  }
+}
+
+.btn {
+  margin-top: 20px;
+}
+
+.mt-1 {
+ @media (max-width: 490px){
+    display: grid;
+    margin: 5px auto;
+    justify-items: flex-end;
+    zoom: 0.9;
+ }
+
+ .btn-secondary{
+   @media (max-width: 490px){
+     margin-top: 20px;
+   }
+ }
+}

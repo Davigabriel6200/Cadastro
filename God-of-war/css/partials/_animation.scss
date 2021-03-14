@@ -1,0 +1,19 @@
+.godwar {
+  fill-opacity: 0;
+
+  transition: 0.9s ease;
+  animation: god_of_war 12s ease alternate;
+}
+
+@keyframes god_of_war {
+  0% {
+    fill-opacity: 0;
+  }
+  25% {
+    fill-opacity: 1;
+  }
+  60%,
+  100% {
+    fill-opacity: 2;
+  }
+}
